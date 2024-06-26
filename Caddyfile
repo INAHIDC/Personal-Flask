@@ -1,0 +1,36 @@
+
+www.nchy.dev {
+
+    redir https://nchy.dev{uri}
+
+}
+
+
+nchy.dev.com {
+
+    reverse_proxy localhost:6060
+
+
+    header {
+
+        Strict-Transport-Security "max-age=31536000;"
+
+        X-Content-Type-Options "nosniff"
+
+        X-Frame-Options "SAMEORIGIN"
+
+        Referrer-Policy "strict-origin-when-cross-origin"
+
+        Access-Control-Allow-Origin "*"
+
+        Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+
+        Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+
+        Access-Control-Expose-Headers "Content-Length,Content-Range"
+
+    }
+
+    encode gzip
+
+}

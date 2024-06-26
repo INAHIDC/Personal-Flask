@@ -1,0 +1,174 @@
+<!-- 
+                                    [__]
+                                    (oo)
+                                     - 
+   I NEED MONEY FOR COFFEE  __     /__ \     __
+    hire meeeeeee             \___/    \___/
+                                  |      |
+                                  \______/
+                                  |    |
+                                  |    |
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Personal Project to 10k a Month</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
+    :root {
+      /* Colors: */
+      --bg: #16181d;
+      --accent: #5686f5;
+      --accent-10: #5686f510;
+      --emphasis: #e8e8fd;
+      --text: #98a0b3;
+      /* Typography */
+      --h1: 2.25rem;
+      --h2: 1.5rem;
+      --h3: 1.25rem;
+      --paragraph: clamp(1rem, 0.875rem + 0.4vw, 1.125rem);
+      --info-text: 1rem;
+      --text-width-wide: 70ch;
+      --text-width-medium: 60ch;
+      --fw-bold: 700; 
+      --fw-regular: 500;
+      --fw-light: 300;
+
+      --spacing-xxs: 0.5em;
+      --spacing-xs: 1em;
+      --spacing-s: 1.5em;
+      --spacing-m: 3em;
+      --spacing-l: 6em;
+      --spacing-xl: 8em;
+ 
+      --radius-xs: 0.25em;
+      --radius-s: 0.5em;
+      --center-it: auto;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-m);
+      display: flex;
+      justify-content: center;
+    }
+
+    article {
+      margin: var(--center-it);
+      max-width: var(--text-width-wide);
+      padding-bottom: var(--spacing-xl);
+    }
+
+    h1, h2, h3 {
+      color: var(--emphasis);
+      font-weight: var(--fw-bold);
+    }
+
+    h1 {
+      font-size: var(--h1);
+      margin-bottom: var(--spacing-s);
+    }
+
+    h2 {
+      font-size: var(--h2);
+      margin-top: var(--spacing-m);
+      margin-bottom: var(--spacing-s);
+    }
+
+    h3 {
+      color: var(--accent);
+      font-size: var(--h3);
+      margin-bottom: var(--spacing-s);
+    }
+
+    p {
+      font-size: var(--paragraph);
+      line-height: 1.6;
+      letter-spacing: 0.25px;
+      margin-bottom: var(--spacing-s);
+    }
+
+    .info_block {
+      display: flex;
+      gap: 6px;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .info, .likes, .replies, .mentions {
+      font-size: var(--info-text);
+    }
+
+    .likes, .replies, .mentions {
+      color: var(--accent);
+    }
+
+    .last_update {
+      background-color: var(--accent-10);
+      color: var(--accent);
+      padding: var(--spacing-xxs) var(--spacing-xs);
+      border-radius: var(--radius-s);
+      font-size: var(--info-text);
+      display: block; 
+      margin-bottom: var(--spacing-m);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>Journey to 10k</h1>
+      <div class="info_block">
+        <p class="info">June 19, 2024 / 10min read</p>
+        <p class="likes">&#8226 3 likes</p>
+        <p class="replies">&#8226 1 replies</p>
+        <p class="mentions">&#8226 0 mentions</p>
+      </div>
+      <p class="last_update">Last updated June 19, 2024</p>
+      <p>I started with a side project and grew it into a thriving business that generates $10k a month. I’ll guide you through my approach to web scraping, API, and data strategies. Additionally, I’ll share how management of inventory and orders has been essential for successfully scaling up quickly</p>
+      <br>
+      <img src="static/img/masonry-portfolio/98k.jpg" alt="sales snapshot">
+      
+      <h2>Web Scraping</h2>
+      <p>The project began with an automated web scraping operation, leveraging Python's BeautifulSoup and Selenium libraries. This approach enabled the systematic extraction of product data from numerous online retail sites. After collecting the data, parsing algo applied to cleanse and structure the data nicely. This structured data was then saved to database; analyzed to identify products with high resale value on platforms such as Amazon and eBay, considering factors such as demand, competition, and profit margins. </p>
+      
+      <h2>API and Data </h2>
+      <p>Central to improving the project's efficiency was the integration of several APIs, including shipping cost calculators and real-time inventory management systems. This integration allowed for dynamic pricing models, where shipping costs were automatically factored into product pricing, ensuring competitiveness and profitability. Furthermore, I utilized Amazon's Selling Partners API to automate the listing and updating of products, which significantly streamlined operations and reduced manual labor.</p>
+
+
+      
+      <h2>Database and Security</h2>
+      <p>The backbone of this project was a database system built using SQLite3, chosen for its lightweight and efficient nature. The database was designed to offer high performance and scalability, capable of managing large datasets with fast access times. To ensure the security of sensitive data, I implemented several security measures. This included the use of Caddy for secure HTTPS connections and a login system where passwords were salted and hashed before storage. These precautions helped comply with data protection regulations, crucial for maintaining user trust and adhering to legal requirements.</p>
+
+      <p>Along with the database and security measures, I implemented a maintenance routine using APScheduler to automatically delete data in accordance with Amazon's policy. This regular cleanup helped ensure compliance and kept the system efficient by managing the data lifecycle effectively.</p>
+      
+      <h2>Inventory and Order Management</h2>
+      <p>The inventory management system was fully automated, using real time tracking of stock levels and automated reordering processes. It could predict stock needs based on sales trends and seasonal changes, helping to minimize overstock and stockouts. The order management system streamlined the entire process from order placement to delivery, including automated coordination with courier services to ensure timely deliveries</p>
+
+      <p>I also set up an automated script to order items priced under $10 using my saved credit information on Instacart. The orders were scheduled strategically so that my friend and I had just enough inventory to ship at specific times. i used Twilio to receive notifications when orders were arriving, serving as reminders to prepare shipments.</p>
+      
+      <h2>Scaling the Project</h2>
+
+      <p>Starting small, my setup initially began with a $5 instance from. As my project or 'business' in this case expanded, I scaled up to multiple instances and implemented CRM tools, sales analytics, and automation on all tedious tasks. These upgrades not only boosted revenue but also opened doors to new markets. The success of these initiatives fueled my passion for creating solutions and little entrepreneurial ventures, driven by the technology and strategies I developed.</p>
+
+      <h2>Thoughts</h2>
+      <p>What began as a simple college experiment soon blossomed into a business, dramatically boosting my monthly income. This adventure highlighted the incredible power of merging little technical know how with entrepreneurial spirit of mine, ultimately inspiring me to formalize my venture. The experience not only paved the way for future projects but also set a new standard for what I could achieve with a little bit of creativity and diligence.</p>
+
+
+
+    </article>
+  </main>
+</body>
+</html>
