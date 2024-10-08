@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!-- Page Title -->
+    <title>Nahid- Projects</title>
+
+    <!-- Meta Keywords and Description -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" title="Favicon"/>
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Other CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/namari-color.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+
+    <!-- Google Webfonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS for Projects Page -->
+    <style>
+        /* Reset and base styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Martel Sans", sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Container for the cards */
+        .projects-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #fff;
+            width: 48%;
+            margin-bottom: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card .card-content {
+            padding: 1rem;
+        }
+        .card .card-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        .card .card-content p {
+            margin-bottom: 1rem;
+        }
+        .card .card-content a.button {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .card .card-content a.button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <!-- Logo -->
+                    <div id="logo">
+                        <img src="{{ url_for('static', filename='images/logo.png') }}" id="banner-logo" alt="Nahid Chowdhury"/>
+                        <img src="{{ url_for('static', filename='images/logo-2.png') }}" id="navigation-logo" alt="Nahid Chowdhury"/>
+                    </div>
+                    <!-- End of Logo -->
+
+                    <!-- Social Icons in Header -->
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/chynic/">
+                                    <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="GitHub" href="http://www.github.com/INAHIDC">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <!-- End of Social Icons in Header -->
+
+                    <!-- Main Navigation -->
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="{{ url_for('home') }}">Home</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('projects') }}">Projects</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('relevant_experience') }}">Relevant Experience</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End of Main Navigation -->
+
+                    <div id="nav-trigger"><span></span></div>
+                    <nav id="nav-mobile"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Main Content -->
+    <main id="content">
+
+        <section id="projects" class="scrollto clearfix">
+            <div class="row clearfix">
+
+                <div class="section-heading">
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">A showcase of some of the projects I've worked on.</p>
+                </div>
+
+                <!-- Projects Container -->
+                <div class="projects-container">
+
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project One">
+                        <div class="card-content">
+                            <h3>Management System</h3>
+                            <p>Backend logic in C and server side through Node.js, theres multiple routes; user is ableable to search and sort for books based on title, author, or year. and librarian needs password to manage the systen; can add and remove or modify books</p>
+                            <a href="https://github.com/INAHIDC/C-Library-Management" class="button">GITHUB</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Project Two">
+                        <div class="card-content">
+                            <h3>Paradigm Professionals</h3>
+                            <p>Full stack application where users can submit pet consultation requests. The form collects basic contact and pet information, which is saved in a MongoDB database. The app uses Node.js and Express for the back-end and HTML/CSS/JavaScript for the front end.</p>
+                            <a href="https://github.com/INAHIDC/Paradigm-Pet-Professionals" class="button">GITHUB</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Project Three">
+                        <div class="card-content">
+                            <h3>Customer Churn</h3>
+                            <p>Model to predict whether a customer will stop doing business with the company based on their demographic, account, and service usage information.</p>
+                            <a href="https://github.com/INAHIDC/ML-churn_project" class="button">GITHUB</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/project4.jpg') }}" alt="Project Four">
+                        <div class="card-content">
+                            <h3>LSTM Case Study</h3>
+                            <p>Graduate research study of an ensemble model using Long Short-Term Memory to predict buying options for Stellar Lumens (XLM).</p>
+                            <a href="https://github.com/INAHIDC/LSTM--Lumen-Indicator" class="button">GITHUB</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End of Projects Container -->
+
+            </div>
+        </section>
+
+    </main>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix">
+
+            <p id="copyright" class="col-2">
+                © 2023 Nahid Chowdhury. All rights reserved.
+            </p>
+
+            <!-- Social Icons in Footer -->
+            <ul class="col-2 social-icons">
+                <li>
+                    <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/chynic/">
+                        <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="GitHub" href="http://www.github.com/INAHIDC">
+                        <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- End of Social Icons in Footer -->
+
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+</div>
+
+<!-- Include JavaScript resources -->
+<script src="{{ url_for('static', filename='js/jquery.1.8.3.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/featherlight.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/featherlight.gallery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.enllax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrollUp.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.stickyNavbar.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/images-loaded.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/lightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/site.js') }}"></script>
+
+</body>
+</html>
